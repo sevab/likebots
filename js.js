@@ -2,7 +2,7 @@
 $('#cryptoModal').on('show.bs.modal', function(event) {
   var button = $(event.relatedTarget) // Button that triggered the modal
   var name = button.data('name');
-  var imgSrc = '/images/qrs/' + name + '.png';
+  var imgSrc = 'images/qrs/' + name + '.png';
   var address = button.data('address');
 
   // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
@@ -10,7 +10,7 @@ $('#cryptoModal').on('show.bs.modal', function(event) {
   var modal = $(this)
   modal.find('#crypto-name').text('Donate ' + name);
   modal.find('#crypto-address').text(address);
-  modal.find('#crypto-qr').attr('src', imgSrc);
+  document.getElementById("crypto-qr").src = imgSrc;
 })
 
 /* STRIPE*/
