@@ -15,15 +15,10 @@ $('#cryptoModal').on('show.bs.modal', function(event) {
 
 /* STRIPE*/
 // Replace with your own publishable key: https://dashboard.stripe.com/test/apikeys
-var PUBLISHABLE_KEY = "pk_test_Tr8olTkdFnnJVywwhNPHwnHK00HkHV4tnP";
+var PUBLISHABLE_KEY = "pk_live_jilCfw3IDHJ03XXqnNmEgEkf";
 // Replace with the domain you want your users to be redirected back to after payment
 var DOMAIN = location.href.replace(/[^/]*$/, "");
 
-if (PUBLISHABLE_KEY === "pk_test_Tr8olTkdFnnJVywwhNPHwnHK00HkHV4tnP") {
-  console.log(
-    "Replace the hardcoded publishable key with your own publishable key: https://dashboard.stripe.com/test/apikeys"
-  );
-}
 
 var stripe = Stripe(PUBLISHABLE_KEY);
 
