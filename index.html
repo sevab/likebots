@@ -5,12 +5,16 @@
     <title>Support Likebots</title>
     <!-- <meta name="description" content="A demo of Stripe Payment Intents" /> -->
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <meta property="og:image" content="https://sevab.github.io/likebots/images/rasp.jpg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="style.css">
+
+    <!-- JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-
     <script src="https://js.stripe.com/v3/"></script>
   </head>
 
@@ -23,10 +27,10 @@
 
           <div class="row text-center mb-2">
             <div class="col-12 col-md-6 mt-2">
-              <button class="btn btn-block btn-lg btn-primary fw-500" data-toggle="collapse" href="#collapseStripe" role="button" aria-expanded="false" aria-controls="collapseStripe">Donate with Stripe</button>
+              <button class="btn btn-block btn-lg btn-primary fw-500" data-toggle="collapse" data-target="#collapseStripe" aria-expanded="false" aria-controls="collapseStripe">Donate with Stripe</button>
             </div>
             <div class="col-12 col-md-6 mt-2">
-              <button class="btn btn-block btn-lg btn-primary fw-500" data-toggle="collapse" href="#collapseCrypto" role="button" aria-expanded="false" aria-controls="collapseCrypto">Donate with Crypto</button>
+              <button class="btn btn-block btn-lg btn-primary fw-500" data-toggle="collapse" data-target="#collapseCrypto" aria-expanded="false" aria-controls="collapseCrypto">Donate with Crypto</button>
             </div>
           </div>
 
@@ -69,16 +73,16 @@
             </div>
           </div>
 
-          <h3>History</h2>
+          <h3>History</h3>
           <p>The bot was first launched in 2017 following <a target="_blank" href="https://twitter.com/pmarca">@pmarca's</a> departure from Twitter. A few people noticed that Marc continued favouriting tweets, so the idea was born to make a bot that will highlight all the tweets he liked. The code was developed in my spare time and launched on a Raspberry Pi from my apartment:</p>
-          <img class="img-fluid rounded mb-3" src="images/rasp.jpg">
+          <img class="img-fluid rounded mb-3" src="images/rasp.jpg" alt="raspberry pi">
           <!-- <div class="embed-responsive embed-responsive-4by3">
             <video autoplay>
               <source src="images/rasp.mp4" type="video/mp4">
             </video>
           </div> -->
 
-          <h3>Make your own bot</h2>
+          <h3>Make your own bot</h3>
           <p>If you would like your own bot you can either purchase the code from me or host it on my Raspberry Pi. Hosted version will not have access to your Twitter account except to make API call for retweets. Once payment is made, you can message me on <a href="https://twitter.com/baskind">Twitter</a> to setup your bot or download the code:</p>
           <div class="row text-center mt-4">
             <div class="col-12 col-md-6 mt-3">
@@ -86,7 +90,7 @@
               <button class="btn btn-block btn-primary btn-lg fw-500 js-btn-stripe" data-plan-id="plan_GfD9mzAnAm6Ra4">$100 / year</button>
             </div>
             <div class="col-12 col-md-6 mt-3">
-              <h5>Buy script</h5>
+              <h5>Buy Source Code</h5>
               <button class="btn btn-block btn-primary btn-lg fw-500 js-btn-stripe" data-sku-id="sku_GfD7y9PUNOOv2G">$300</button>
             </div>
           </div>
@@ -98,7 +102,7 @@
     </article>
 
     <!-- Crypto Modal -->
-    <div class="modal fade" id="cryptoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="cryptoModal" tabindex="-1" role="dialog" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
