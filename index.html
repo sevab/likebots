@@ -15,6 +15,7 @@
     <!-- JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
     <script src="https://js.stripe.com/v3/"></script>
   </head>
 
@@ -26,10 +27,10 @@
           <p>If you enjoy following one of my Likebots <a target="_blank" href="http://twitter.com/pmarcas_likes">@pmarcas_likes</a>, <a target="_blank" href="https://twitter.com/naval_likes">@naval_likes</a> or <a target="_blank" href="https://twitter.com/rabois_likes">@rabois_likes</a> consider supporting their operation with a donation via Stripe or Crypto:</p>
 
           <div class="row text-center mb-2">
-            <div class="col-12 col-md-6 mt-2">
+            <div class="col-12 col-sm-6 mt-2">
               <button class="btn btn-block btn-lg btn-primary fw-500" data-toggle="collapse" data-target="#collapseStripe" aria-expanded="false" aria-controls="collapseStripe">Donate with Stripe</button>
             </div>
-            <div class="col-12 col-md-6 mt-2">
+            <div class="col-12 col-sm-6 mt-2">
               <button class="btn btn-block btn-lg btn-primary fw-500" data-toggle="collapse" data-target="#collapseCrypto" aria-expanded="false" aria-controls="collapseCrypto">Donate with Crypto</button>
             </div>
           </div>
@@ -50,6 +51,10 @@
                 <button class="btn btn-block btn-outline-primary fw-500  js-btn-stripe" data-plan-id="plan_GfD6rarM6wecSe">Donate $20 / month</button>
                 <button class="btn btn-block btn-outline-primary fw-500  js-btn-stripe" data-plan-id="plan_GfD7PzZImpuO9e">Donate $50 / month</button>
               </div>
+              <div class="col-12 mt-3">
+                <p class="mb-1 fs-18">or</p>
+                <a href="https://paypal.me/baskind" target="_blank" class="btn btn-block btn-outline-primary">Donate custom amount with PayPal</a>
+              </div>
             </div>
           </div>
 
@@ -59,17 +64,21 @@
                 <h5>Crypto</h5>
               </div>
               <div class="col">
-                <button type="button" class="btn btn-block btn-outline-primary fw-500" data-toggle="modal" data-target="#cryptoModal" data-name='BTC' data-address='3PL4NxtpfQii3Vey7q6bzewrNaHSvmkRHZ'>BTC</button>
+                <button type="button" class="btn btn-block btn-outline-primary fw-500" data-toggle="modal" data-target="#cryptoModal" data-name='BTC' data-link-name="bitcoin" data-address='3PL4NxtpfQii3Vey7q6bzewrNaHSvmkRHZ'>BTC</button>
               </div>
               <div class="col">
-                <button type="button" class="btn btn-block btn-outline-primary fw-500" data-toggle="modal" data-target="#cryptoModal" data-name='ETH' data-address='0xB97Ea17a328BAE45dd824420a8e73fA04785B3dB'>ETH</button>
+                <button type="button" class="btn btn-block btn-outline-primary fw-500" data-toggle="modal" data-target="#cryptoModal" data-name='ETH' data-link-name="ethereum" data-address='0xB97Ea17a328BAE45dd824420a8e73fA04785B3dB'>ETH</button>
               </div>
               <div class="col">
-                <button type="button" class="btn btn-block btn-outline-primary fw-500" data-toggle="modal" data-target="#cryptoModal" data-name='BCH' data-address='qqf907wr5v79uhkq6thze7fc639qq3u95ygs80j8rl'>BCH</button>
+                <button type="button" class="btn btn-block btn-outline-primary fw-500" data-toggle="modal" data-target="#cryptoModal" data-name='BCH' data-link-name="bitcoincash" data-address='qqf907wr5v79uhkq6thze7fc639qq3u95ygs80j8rl'>BCH</button>
               </div>
               <div class="col">
-                <button type="button" class="btn btn-block btn-outline-primary fw-500" data-toggle="modal" data-target="#cryptoModal" data-name='LTC' data-address='MNUmijDPCbf6sqWWeMzam6YXfMEdXkpD8q'>LTC</button>
+                <button type="button" class="btn btn-block btn-outline-primary fw-500" data-toggle="modal" data-target="#cryptoModal" data-link-name="litecoin" data-name='LTC' data-address='MNUmijDPCbf6sqWWeMzam6YXfMEdXkpD8q'>LTC</button>
               </div>
+              <!-- <div class="col">
+                <button type="button" class="btn btn-block btn-outline-primary fw-500" data-toggle="modal" data-target="#cryptoModal" data-link-name="ripple" data-name='XPR' data-address='rw2ciyaNshpHe7bCHo4bRWq6pqqynnWKQg'>XPR</button>
+                Tag: 2614974265
+              </div> -->
             </div>
           </div>
 
@@ -83,7 +92,7 @@
           </div> -->
 
           <h3>Make your own bot</h3>
-          <p>If you would like your own bot you can either purchase the code from me or host it on my Raspberry Pi. Hosted version will not have access to your Twitter account except to make API call for retweets. Once payment is made, you can message me on <a href="https://twitter.com/baskind">Twitter</a> to setup your bot or download the code:</p>
+          <p>If you would like your own bot you can either purchase the code from me or host it on my Raspberry Pi. With hosted version you will have full access to your 'Likes' account, the bot will just need an API key with a single permission to make retweets on your behalf. Once payment is made, you can message me on <a href="https://twitter.com/baskind">Twitter</a> to setup your bot or download the code:</p>
           <div class="row text-center mt-4">
             <div class="col-12 col-md-6 mt-3">
               <h5>Pay for hosted version</h5>
@@ -113,7 +122,17 @@
           </div>
           <div class="modal-body text-center">
             <img id="crypto-qr" class="img-fluid" alt="bitcoin address" src="">
-            <p id="crypto-address" class="text-muted fs-18"></p>
+            <p id="crypto-address" class="text-muted fs-18 text-truncate"></p>
+            <div class="d-flex">
+              <a id="crypto-link" target="_blank" class="btn btn-outline-secondary flex-fill mr-1" href="#">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-link fa-w-16 fa-2x"><path fill="currentColor" d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"></path></svg>
+                Link
+              </a>
+              <button data-clipboard-target="#crypto-address" class="btn btn-outline-secondary flex-fill ml-1 js-clipboard" type="button">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 448 512"><path fill="currentColor" d="M320 448v40c0 13.255-10.745 24-24 24H24c-13.255 0-24-10.745-24-24V120c0-13.255 10.745-24 24-24h72v296c0 30.879 25.121 56 56 56h168zm0-344V0H152c-13.255 0-24 10.745-24 24v368c0 13.255 10.745 24 24 24h272c13.255 0 24-10.745 24-24V128H344c-13.2 0-24-10.8-24-24zm120.971-31.029L375.029 7.029A24 24 0 00358.059 0H352v96h96v-6.059a24 24 0 00-7.029-16.97z"/></svg>
+                Copy
+              </button>
+            </div>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-block btn-lg btn-secondary" data-dismiss="modal">Close</button>

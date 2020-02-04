@@ -18,3 +18,11 @@ h3 {
 .fs-18 {
   font-size: 18px!important;
 }
+
+.icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: baseline;
+  margin-bottom: -0.15em;
+  margin-right: 0.1em;
+}
