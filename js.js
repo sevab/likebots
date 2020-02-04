@@ -1,6 +1,21 @@
 /* Setup */
 $(new ClipboardJS('.js-clipboard'));
 
+// Read param
+var urlParams = new URLSearchParams(window.location.search);
+var pageType = urlParams.get('type');
+var closeBtnStr = "<a href=\"/\" class=\"close\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></a>";
+if (pageType === 'cancel') {
+  $('.js-body').prepend(
+    "<div class=\"alert alert-danger alert-dismissible fade show mb-n3 fs-18\" role=\"alert\">The payment didn't go through, please try again." + closeBtnStr + "</div>"
+  )
+}
+if (pageType === 'success') {
+  $('.js-body').prepend(
+    "<div class=\"alert alert-success alert-dismissible fade show mb-n3 fs-18\" role=\"alert\">Thank you for the donation, really appreciate it!" + closeBtnStr + "</div>"
+  )
+}
+
 /* MODAL */
 $('#cryptoModal').on('show.bs.modal', function(event) {
   var button = $(event.relatedTarget) // Button that triggered the modal
@@ -50,9 +65,9 @@ document.querySelectorAll('.js-btn-stripe').forEach(function(button) {
       .redirectToCheckout({
         items: items,
         successUrl:
-          DOMAIN + "success.html?session_id={CHECKOUT_SESSION_ID}",
+          DOMAIN + "?type=success",
         cancelUrl:
-          DOMAIN + "canceled.html?session_id={CHECKOUT_SESSION_ID}"
+          DOMAIN + "?type=cancel"
       })
       .then(handleResult);
   });
