@@ -4,7 +4,7 @@ $(new ClipboardJS('.js-clipboard'));
 // Read param
 var urlParams = new URLSearchParams(window.location.search);
 var pageType = urlParams.get('type');
-var closeBtnStr = "<a href=\"/\" class=\"close\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></a>";
+var closeBtnStr = "<a href=\"/likebots\" class=\"close\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></a>";
 if (pageType === 'cancel') {
   $('.js-body').prepend(
     "<div class=\"alert alert-danger alert-dismissible fade show mb-n3 fs-18\" role=\"alert\">The payment didn't go through, please try again." + closeBtnStr + "</div>"
