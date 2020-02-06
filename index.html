@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <title>Support Likebots</title>
-    <!-- <meta name="description" content="A demo of Stripe Payment Intents" /> -->
+    <!-- <meta name="description" content="..." /> -->
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <meta property="og:image" content="https://sevab.github.io/likebots/images/rasp.jpg" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,45 +16,21 @@
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
-    <script src="https://js.stripe.com/v3/"></script>
   </head>
 
   <body class="pt-0 pt-md-5 pb-5">
     <article class="container">
       <div class="row">
-        <div class="col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3 js-body">
+        <div class="col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3 js-body" id="hero">
           <h1 class="mt-3 mt-md-5 mb-2" style="font-weight: 700;">Support Likebots</h1>
-          <p>If you enjoy following one of my Likebots <a target="_blank" href="http://twitter.com/pmarcas_likes">@pmarcas_likes</a>, <a target="_blank" href="https://twitter.com/naval_likes">@naval_likes</a> or <a target="_blank" href="https://twitter.com/rabois_likes">@rabois_likes</a> consider supporting their operation with a donation via Stripe or Crypto:</p>
+          <p>If you enjoy following one of my Likebots <a target="_blank" href="http://twitter.com/pmarcas_likes">@pmarcas_likes</a>, <a target="_blank" href="https://twitter.com/naval_likes">@naval_likes</a> or <a target="_blank" href="https://twitter.com/rabois_likes">@rabois_likes</a> consider supporting their operation with a donation via Paypal or Crypto:</p>
 
           <div class="row text-center mb-2">
             <div class="col-12 col-sm-6 mt-2">
-              <button class="btn btn-block btn-lg btn-primary fw-500" data-toggle="collapse" data-target="#collapseStripe" aria-expanded="false" aria-controls="collapseStripe">Donate with Stripe</button>
+              <a href="https://paypal.me/baskind" target="_blank" class="btn btn-block btn-lg btn-primary fw-500">Donate with Paypal</a>
             </div>
             <div class="col-12 col-sm-6 mt-2">
               <button class="btn btn-block btn-lg btn-primary fw-500" data-toggle="collapse" data-target="#collapseCrypto" aria-expanded="false" aria-controls="collapseCrypto">Donate with Crypto</button>
-            </div>
-          </div>
-
-          <div class="collapse" id="collapseStripe">
-            <div class="row text-center mb-4">
-              <div class="col-12 col-md-6 mt-3">
-                <h5>One-time Donation</h5>
-                <button class="btn btn-block btn-outline-primary fw-500  js-btn-stripe" data-sku-id="sku_GfCytgxgGs4qT6">Donate $5 once</button>
-                <button class="btn btn-block btn-outline-primary fw-500  js-btn-stripe" data-sku-id="sku_GfCzm9a7gooMhr">Donate $10 once</button>
-                <button class="btn btn-block btn-outline-primary fw-500  js-btn-stripe" data-sku-id="sku_GfD1jhnPrPW0ac">Donate $20 once</button>
-                <button class="btn btn-block btn-outline-primary fw-500  js-btn-stripe" data-sku-id="sku_GfD1G0LJ3CV9Gn">Donate $100 once</button>
-              </div>
-              <div class="col-12 col-md-6 mt-3">
-                <h5>Recurring Donation</h5>
-                <button class="btn btn-block btn-outline-primary fw-500  js-btn-stripe" data-plan-id="plan_GfD3VtLHdcql5h">Donate $5 / month</button>
-                <button class="btn btn-block btn-outline-primary fw-500  js-btn-stripe" data-plan-id="plan_GfD529Bzwss7Ht">Donate $10 / month</button>
-                <button class="btn btn-block btn-outline-primary fw-500  js-btn-stripe" data-plan-id="plan_GfD6rarM6wecSe">Donate $20 / month</button>
-                <button class="btn btn-block btn-outline-primary fw-500  js-btn-stripe" data-plan-id="plan_GfD7PzZImpuO9e">Donate $50 / month</button>
-              </div>
-              <div class="col-12 mt-3">
-                <p class="mb-1 fs-18">or</p>
-                <a href="https://paypal.me/baskind" target="_blank" class="btn btn-block btn-outline-primary">Donate custom amount with PayPal</a>
-              </div>
             </div>
           </div>
 
@@ -99,11 +75,14 @@
           <div class="row text-center mt-4">
             <div class="col-12 col-md-6 mt-3">
               <h5>Pay for hosted version</h5>
-              <button class="btn btn-block btn-primary btn-lg fw-500 js-btn-stripe" data-plan-id="plan_GfD9mzAnAm6Ra4">$100 / year</button>
+              <div class="card border-primary text-primary fw-500 py-2 fs-18">$100 / year</div>
             </div>
             <div class="col-12 col-md-6 mt-3">
               <h5>Buy Source Code</h5>
-              <button class="btn btn-block btn-primary btn-lg fw-500 js-btn-stripe" data-sku-id="sku_GfD7y9PUNOOv2G">$300</button>
+              <div class="card border-primary text-primary fw-500 py-2 fs-18">$300</div>
+            </div>
+            <div class="col-12 mt-4">
+              <a class="fw-500" href="#hero">Pay with Paypal or Crypto</a>
             </div>
           </div>
 
